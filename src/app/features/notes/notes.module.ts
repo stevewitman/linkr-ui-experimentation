@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CoreModule } from 'src/app/core/core.module';
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
+import { NotesRoutingModule } from './notes-routing.module';
+import { NotesComponent } from './notes.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    NotesComponent
   ],
   imports: [
     CommonModule,
     CoreModule,
-    HomeRoutingModule,
+    NotesRoutingModule,
   ]
 })
-export class HomeModule { }
+export class NotesModule { }

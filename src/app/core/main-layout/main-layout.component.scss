@@ -1,0 +1,83 @@
+.mat-toolbar {
+  padding-left: 0px;  
+  padding-right: 0px;
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+button,mat-icon-button {
+  margin: 0 10px;
+  &.active {
+    filter: brightness(129%);;
+  }
+}
+
+button.mat-icon-button {
+  margin: 2px;
+}
+
+.menu-button {
+  margin-right: 0px;
+}
+
+.logo-link {
+  height: 28px;
+  border: none; 
+  cursor: pointer; 
+  outline: none; 
+}
+
+.logo-button {
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 32px;
+
+}
+
+.logo {
+  font-size: 20px;
+  color: yellow;
+  font-family: 'Gugi', cursive;
+  letter-spacing: 0.1em;
+  height: 24px;
+}
+
+.logo-dot {
+  color: yellow;
+  font-family: 'Gugi', cursive;
+  letter-spacing: 0.1em;
+  font-size: 15px;
+  position:relative; left:-2px;
+}
+
+.logo-me {
+  color: yellow;
+  font-family: 'Gugi', cursive;
+  letter-spacing: 0.1em;
+  font-size: 15px;
+}
+
+.tab {
+  border-bottom: 1px solid #666;
+  color: gray;
+}
+
+.tab-active {
+  border-bottom: 1px solid #49fb35;
+  color: #49fb35;
+}
+
+.login-button {
+  margin-left: 5px;
+}
+
+main {
+  padding: 15px;
+}
