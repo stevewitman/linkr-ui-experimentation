@@ -28,6 +28,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "src/custom-theme.scss"
+              },
               "src/styles.scss"
             ],
             "scripts": []
@@ -92,6 +95,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "linkr"
+    }
+  },
+  "defaultProject": "linkr",
+  "cli": {
+    "analytics": false
+  }
 }

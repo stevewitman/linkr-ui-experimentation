@@ -1,0 +1,48 @@
+.spacer {
+  flex: 1 0 auto;
+}
+
+button {
+  margin: 0 10px;
+  &.active {
+    filter: brightness(129%);;
+  }
+}
+
+.mat-toolbar {
+  padding-left: 0px;  
+  padding-right: 0px;
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.logo {
+  color: yellow;
+  font-family: 'Recursive', sans-serif;
+}
+
+.tab-active {
+  border-bottom: 1px solid #49fb35;
+  color: #49fb35;
+}
+
+.tab-inactive {
+  border-bottom: 1px solid #666;
+  color: gray;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+
+//  color:#65B2FF;
+//  background-color:#181818;
+//  color:#DE0303;
+
+// .cell A:link {text-decoration: none; color: #A2D60F;}
+
+// .cell A:hover {text-decoration: none; color: yellow;}
