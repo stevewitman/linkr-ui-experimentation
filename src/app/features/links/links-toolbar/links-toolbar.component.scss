@@ -1,0 +1,30 @@
+.links-toolbar {
+  background-color: #424242;
+  display: flex;
+  height: 46px;
+}
+
+.scroll-button {
+  display: inline-flex;
+  bottom: 2px;
+}
+
+.active-action {
+  color: #49fb35;
+}
+
+.scrollable {
+  flex-grow: 100;
+  white-space: nowrap;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+.feature-actions {
+  font-size: 1.1em;
+  font-weight: 400;
+  top: 5px;
+}

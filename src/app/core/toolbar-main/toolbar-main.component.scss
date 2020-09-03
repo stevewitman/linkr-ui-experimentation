@@ -7,15 +7,15 @@
   z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
 }
 
-.spacer {
-  flex: 1 1 auto;
-}
-
 button,mat-icon-button {
   margin: 0 10px;
   &.active {
     filter: brightness(129%);;
   }
+}
+
+.mat-icon-button:hover {
+  background-color: #2a2a2a;
 }
 
 button.mat-icon-button {
@@ -38,7 +38,6 @@ button.mat-icon-button {
   padding-left: 10px;
   padding-right: 10px;
   height: 32px;
-
 }
 
 .logo {
@@ -65,19 +64,33 @@ button.mat-icon-button {
 }
 
 .tab {
+  color: #00A9F4;
   border-bottom: 1px solid #666;
+}
+
+// .tab:hover {
+//   color: #00A9F4;
+//   border-bottom: 1px solid #00A9F4;;
+// }
+
+.tab-active {
+  color: #49fb35;
+  border-bottom: 1px solid #49fb35;
+}
+
+.isLoggedIn {
+  color: yellow;
+}
+
+.isLoggedOut {
   color: gray;
 }
 
-.tab-active {
-  border-bottom: 1px solid #49fb35;
-  color: #49fb35;
+.menu-title {
+  font-size: 16px;
+}
+.menu-subtitle {
+  font-size: 10px;
 }
 
-.login-button {
-  margin-left: 5px;
-}
 
-main {
-  padding: 15px;
-}

@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { RouterModule } from '@angular/router';
 
-import { MaterialModule } from './material/material.module';
-
-// removed Common Module
+import { SharedModule } from '../shared/shared.module';
+import { LoginComponent } from './auth/login/login.component';
+import { ToolbarMainComponent } from './toolbar-main/toolbar-main.component';
 
 @NgModule({
   declarations: [
-    MainLayoutComponent,
+    LoginComponent,
+    ToolbarMainComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
-    MaterialModule
+    SharedModule
   ],
   exports: [
-    MainLayoutComponent,
+    ToolbarMainComponent,
   ]
 })
 export class CoreModule { }

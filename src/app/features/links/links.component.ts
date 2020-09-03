@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./links.component.scss']
 })
 export class LinksComponent implements OnInit {
+  activeAction = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+  startAction(action) {
+    console.log('Link Action Clicked:', action);
+    this.activeAction = action;
+  }
 }

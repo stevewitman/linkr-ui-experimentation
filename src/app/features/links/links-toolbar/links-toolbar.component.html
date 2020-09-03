@@ -1,0 +1,151 @@
+<div class="links-toolbar">
+  <div class="scroll-button">
+    <button
+      mat-button
+      class="d-block d-sm-none button-left"
+      (click)="scrollLeft()"
+    >
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+  </div>
+
+  <div class="scrollable" #widgetsContent>
+    <button
+      class="feature-actions"
+      mat-button
+      color="primary"
+      (click)="actionClicked('add')"
+      [ngClass]="{ 'active-action': activeAction === 'add' }"
+    >
+      Add
+    </button>
+
+    <button
+      class="feature-actions"
+      mat-button
+      color="primary"
+      (click)="actionClicked('edit')"
+      [ngClass]="{ 'active-action': activeAction === 'edit' }"
+    >
+      Edit
+    </button>
+
+    <button
+      class="feature-actions"
+      mat-button
+      color="primary"
+      (click)="actionClicked('search')"
+      [ngClass]="{ 'active-action': activeAction === 'search' }"
+    >
+      Search
+    </button>
+
+    <button
+      class="feature-actions"
+      mat-button
+      color="primary"
+      (click)="actionClicked('short')"
+      [ngClass]="{ 'active-action': activeAction === 'short' }"
+    >
+      Short
+    </button>
+
+    <button
+      class="feature-actions"
+      mat-button
+      color="primary"
+      (click)="actionClicked('archive')"
+      [ngClass]="{ 'active-action': activeAction === 'archive' }"
+    >
+      Archive
+    </button>
+
+    <button
+      class="feature-actions"
+      mat-button
+      color="primary"
+      (click)="actionClicked('order')"
+      [ngClass]="{ 'active-action': activeAction === 'order' }"
+    >
+      Order
+    </button>
+  </div>
+
+  <div class="scroll-button">
+    <button
+      mat-button
+      class="d-block d-sm-none"
+      (click)="scrollRight()"
+    >
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+
+</div>
+<!-- ******************************************** -->
+<!-- <div class="links-toolbar">
+
+  <div class="scrollable" #widgetsContent>
+    <button
+      class="feature-actions"
+      mat-button
+      color="primary"
+      (click)="actionClicked('add')"
+      [ngClass]="{ 'active-action': activeAction === 'add' }"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+
+    <button
+      class="feature-actions"
+      mat-button
+      color="primary"
+      (click)="actionClicked('edit')"
+      [ngClass]="{ 'active-action': activeAction === 'edit' }"
+    >
+           <mat-icon>edit</mat-icon>
+    </button>
+
+    <button
+      class="feature-actions"
+      mat-button
+      color="primary"
+      (click)="actionClicked('search')"
+      [ngClass]="{ 'active-action': activeAction === 'search' }"
+    >
+      <mat-icon>search</mat-icon>
+    </button>
+
+    <button
+      class="feature-actions"
+      mat-button
+      color="primary"
+      (click)="actionClicked('short')"
+      [ngClass]="{ 'active-action': activeAction === 'short' }"
+    >
+      <mat-icon>looks_one</mat-icon>
+    </button>
+
+    <button
+      class="feature-actions"
+      mat-button
+      color="primary"
+      (click)="actionClicked('archive')"
+      [ngClass]="{ 'active-action': activeAction === 'archive' }"
+    >
+      <mat-icon>rule</mat-icon>
+    </button>
+
+    <button
+      class="feature-actions"
+      mat-button
+      color="primary"
+      (click)="actionClicked('order')"
+      [ngClass]="{ 'active-action': activeAction === 'order' }"
+    >
+      <mat-icon>swap_vert</mat-icon>
+    </button>
+  </div>
+
+
+</div> -->

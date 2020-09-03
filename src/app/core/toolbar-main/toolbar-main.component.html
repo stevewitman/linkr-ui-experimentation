@@ -1,0 +1,82 @@
+<mat-toolbar>
+  <button mat-icon-button class="menu-button">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <button mat-button class="logo-button" matTooltip="HOME" routerLink="/home">
+    <span class="logo-link">
+      <span class="logo">Linkr</span>
+      <span class="logo-dot">.</span>
+      <span class="logo-me">me</span>
+    </span>
+  </button>
+
+  <span class="spacer"></span>
+
+  <div class="tab" [routerLinkActive]="['tab-active']">
+    <button mat-icon-button matTooltip="LINKS" routerLink="/links">
+      <mat-icon>links</mat-icon>
+    </button>
+  </div>
+
+  <div class="tab" [routerLinkActive]="['tab-active']">
+    <button mat-icon-button matTooltip="NOTES" routerLink="/notes">
+      <mat-icon>text_snippet</mat-icon>
+    </button>
+  </div>
+
+  <div class="tab" [routerLinkActive]="['tab-active']">
+    <button mat-icon-button matTooltip="LISTS" routerLink="/lists">
+      <mat-icon>format_list_bulleted</mat-icon>
+    </button>
+  </div>
+
+  <div class="tab" [routerLinkActive]="['tab-active']">
+    <button mat-icon-button matTooltip="REMINDERS" routerLink="/reminders">
+      <mat-icon matBadge="1" matBadgeSize="small" matBadgeColor="warn">av_timer</mat-icon>
+    </button>
+  </div>
+  
+  <span class="spacer"></span>
+
+  <div *ngIf="authService.user$ | async; then loggedIn else loggedOut">
+    <!-- template will replace this div with loggedIn or LoggedOut-->
+  </div>
+
+  <ng-template #loggedIn>
+    <button mat-icon-button class="login-button" [matMenuTriggerFor]="login">
+      <mat-icon class="isLoggedIn">person</mat-icon>
+    </button>
+  </ng-template>
+
+  <ng-template #loggedOut>
+    <button mat-icon-button class="login-button" [matMenuTriggerFor]="login">
+      <mat-icon class="isLoggedOut">person_outline</mat-icon>
+    </button>
+  </ng-template>
+
+  <mat-menu #login="matMenu">
+    <div *ngIf="authService.user$ | async; then authenticated else guest">
+      <!-- template will replace this div -->
+    </div>
+    <!-- User NOT logged in -->
+    <ng-template #guest>
+      <button mat-menu-item (click)="authService.googleSignin()">
+        <mat-icon>person</mat-icon>
+        <span>Google Login</span>
+      </button>
+    </ng-template>
+    <!-- User logged in -->
+    <ng-template #authenticated>
+      <button mat-menu-item (click)="authService.signOut()">
+        <mat-icon>person_outline</mat-icon>
+        <span>Logout</span>
+      </button>
+    </ng-template>
+  </mat-menu>
+
+</mat-toolbar>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

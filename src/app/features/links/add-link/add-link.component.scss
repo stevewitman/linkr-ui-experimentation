@@ -1,0 +1,49 @@
+.button-cancel {
+  background: gray;
+}
+
+.action-title {
+  color: #49fb35;
+  display: inline-block;
+  padding-top: 10px;
+  padding-right: 15px;
+}
+
+.toggles {
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 40px;
+}
+
+.toggle-selected ::ng-deep {
+  color: yellow;
+}
+
+// ::ng-deep .mat-slide-toggle-content { color: blue; }
+
+.input-full-width {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.mat-card {
+  margin-top: 18px;
+}
+
+.mat-card-title {
+  padding: 0px;
+  position: relative;
+  left: -10px;
+}
+
+/* input color class */
+::ng-deep input.mat-input-element {
+  color: yellow;
+}
+
+/* input color class */
+::ng-deep textarea.mat-input-element {
+  color: yellow;
+  height: 19px;
+}
